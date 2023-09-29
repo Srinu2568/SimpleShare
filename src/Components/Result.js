@@ -12,7 +12,7 @@ function Result(props) {
 		if (navigator.canShare) {
 			navigator
 				.share({
-					url: 'download/' + result.URL,
+					url: `download?id=${result.URL}`,
 					title: 'My Shared Files',
 					text:
 						'Please download these files using the code: ' +
@@ -24,9 +24,8 @@ function Result(props) {
 			let a = document.createElement('a');
 			a.setAttribute(
 				'href',
-				'whatsapp://send?text=Hii there, I am sharing some files with you. Download them using the code:  \n' +
-					result.URL +
-					`\n    at  https://simple-share-flame.vercel.app?id=${props.url}` 
+				'whatsapp://send?text=Hii there, I am sharing some files with you. Download them using the link \n' +
+					`\n    at  https://simple-share-flame.vercel.app/download?id=${props.url}` 
 			);
 			document.body.appendChild(a);
 			a.click();
