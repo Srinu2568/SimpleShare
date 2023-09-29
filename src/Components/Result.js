@@ -16,7 +16,7 @@ function Result(props) {
 					title: 'My Shared Files',
 					text:
 						'Please download these files using the code: ' +
-						result.URL +
+						`https://simple-share-flame.vercel.app/download?id=${props.url}` +
 						' at ',
 				})
 				.catch((error) => console.log('Sharing failed', error));
