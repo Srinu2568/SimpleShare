@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar';
 import Send from './Components/Send';
 import Receive from './Components/Recieve';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NotFound from './Components/NotFound';
 
 function App() {
 	return (
@@ -11,8 +12,9 @@ function App() {
 				<NavBar />
 				<Routes>
 					<Route path='/' exact element={<Home />} />
-					<Route path='/send' element={<Send />} />
+					<Route path='/send' exact element={<Send />} />
 					<Route path='/download' element={<Receive />} />
+					<Route path='*' element={<NotFound />} />
 				</Routes>
 			</div>
 		</Router>

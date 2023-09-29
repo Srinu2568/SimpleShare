@@ -4,14 +4,14 @@ import { getStorage } from 'firebase/storage'
 import 'firebase/analytics'
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyAufGDFBlqD92fcIY80gj6PNcm2YC8MIs4',
-    authDomain: 'swift-share.firebaseapp.com',
-    databaseURL: 'https://swift-share.firebaseio.com',
-    projectId: 'swift-share',
-    storageBucket: 'swift-share.appspot.com',
-    messagingSenderId: '400572723438',
-    appId: '1:400572723438:web:48af3e5b9e7aecc6f343ff',
-    measurementId: 'G-6SK8FJ1XXJ',
+    apiKey: 'AIzaSyAdCfh0Xqohd_tYR9rfjOQABpMm7kodRP4',
+    authDomain: 'simpleshare-10236.firebaseapp.com',
+    databaseURL: 'https://simpleshare-10236-default-rtdb.firebaseio.com/',
+    projectId: 'simpleshare-10236',
+    storageBucket: 'gs://simpleshare-10236.appspot.com',
+    messagingSenderId: '405908613840',
+    appId: '1:405908613840:web:9e029fb96dd594c29cccd5',
+    measurementId: 'G-RBQKL674KJ',
 }
 // Initialize Firebase
 const app = initializeApp(firebaseConfig)

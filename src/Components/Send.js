@@ -15,9 +15,9 @@ function Send() {
 
     const random = () => {
         var result = ''
-        let chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        let chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         result += String(Math.floor(Math.random() * 100) + 1)
-        for (var i = 10; i > 0; --i)
+        for (var i = 2; i > 0; --i)
             result += chars[Math.floor(Math.random() * chars.length)]
         result += String(Math.floor(Math.random() * 100) + 1)
         return result

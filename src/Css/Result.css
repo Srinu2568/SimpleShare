@@ -61,4 +61,7 @@ input {
         left: 5%;
         right: 5%;
     }
+    .CopyButton{
+        display: none;
+    }
 }

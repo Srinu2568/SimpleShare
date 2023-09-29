@@ -2,12 +2,15 @@ import React, { useState } from 'react'
 import '../Css/Recieve.css'
 import { storage } from '../init-firebase'
 import { ref, listAll, getDownloadURL } from 'firebase/storage'
+import { useSearchParams } from 'react-router-dom'
 
 function Receive() {
+    const [params] = useSearchParams()
     const [receiveState, setReceiveState] = useState({
         PROGRESS: 0,
     })
-    const CODE = String(window.location.href).slice(36)
+    // const CODE = String(window.location.href).slice(36)
+    const CODE = params.get('id');
 
     const download = (files) => {
         let len = files.length
