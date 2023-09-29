@@ -14,10 +14,7 @@ function Result(props) {
 				.share({
 					url: `download?id=${result.URL}`,
 					title: 'My Shared Files',
-					text:
-						'Please download these files using the code: ' +
-						`https://simple-share-flame.vercel.app/download?id=${props.url}` +
-						' at ',
+					text: 'Please download these files using ',
 				})
 				.catch((error) => console.log('Sharing failed', error));
 		} else {
@@ -25,7 +22,7 @@ function Result(props) {
 			a.setAttribute(
 				'href',
 				'whatsapp://send?text=Hii there, I am sharing some files with you. Download them using the link \n' +
-					`\n    at  https://simple-share-flame.vercel.app/download?id=${props.url}` 
+					`\n    at  https://simple-share-flame.vercel.app/download?id=${props.url}`
 			);
 			document.body.appendChild(a);
 			a.click();
