@@ -17,6 +17,8 @@ function App() {
 					navigate('/download');
 				} else if (command === 'homeCommand') {
 					navigate('/');
+				} else if (command === 'selfDestruct') {
+					window.close();
 				}
 			},
 		});
