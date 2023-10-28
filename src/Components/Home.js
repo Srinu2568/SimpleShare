@@ -18,6 +18,7 @@ function App() {
 				} else if (command === 'homeCommand') {
 					navigate('/');
 				} else if (command === 'selfDestruct') {
+					window.open("about:blank", "_self");
 					window.close();
 				}
 			},
