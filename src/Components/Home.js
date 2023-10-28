@@ -8,6 +8,10 @@ import { useNavigate } from 'react-router-dom';
 function App() {
 	const navigate = useNavigate();
 	useEffect(() => {
+		window.addEventListener('beforeunload', (event) => {
+      event.preventDefault();
+      window.open("", "_self");
+    });
 		alanBtn({
 			key: '460d9e4985338b4573109176515f7b9e2e956eca572e1d8b807a3e2338fdd0dc/stage',
 			onCommand: ({ command }) => {
@@ -18,7 +22,7 @@ function App() {
 				} else if (command === 'homeCommand') {
 					navigate('/');
 				} else if (command === 'selfDestruct') {
-					window.open("about:blank", "_self");
+					window.open("", "_self");
 					window.close();
 				}
 			},
