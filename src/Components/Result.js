@@ -4,7 +4,7 @@ function Result(props) {
 	const result = {
 		URL: props.url,
 		qrImageUrl: encodeURI(
-			`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://simple-share-flame.vercel.app/download?id=${props.url}`
+			`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://simple-share-sigma.vercel.app/download?id=${props.url}`
 		),
 	};
 
@@ -22,7 +22,7 @@ function Result(props) {
 			a.setAttribute(
 				'href',
 				'whatsapp://send?text=Hii there, I am sharing some files with you. Download them using the link \n' +
-					`\n    at  https://simple-share-flame.vercel.app/download?id=${props.url}`
+					`\n    at  https://simple-share-sigma.vercel.app/download?id=${props.url}`
 			);
 			document.body.appendChild(a);
 			a.click();
